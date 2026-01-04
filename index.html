@@ -4,33 +4,131 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DECENT PARFUM – Online Shop</title>
+
   <style>
-    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#f5f5f5; color:#222; scroll-behavior: smooth; }
-    header { background:#000; color:#fff; padding:30px; text-align:center; }
-    header h1 { margin:0; letter-spacing:3px; }
-    nav { background:#111; padding:12px; text-align:center; position:sticky; top:0; }
-    nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
-    nav a:hover { text-decoration:underline; }
-    section { padding:70px 20px; }
+    body { 
+      margin:0; 
+      font-family:Arial, Helvetica, sans-serif; 
+      background:#f5f5f5; 
+      color:#222; 
+      scroll-behavior: smooth; 
+    }
+
+    header { 
+      background:#000; 
+      color:#fff; 
+      padding:30px; 
+      text-align:center; 
+    }
+
+    header h1 { 
+      margin:0; 
+      letter-spacing:3px; 
+    }
+
+    nav { 
+      background:#111; 
+      padding:12px; 
+      text-align:center; 
+      position:sticky; 
+      top:0; 
+    }
+
+    nav a { 
+      color:#fff; 
+      margin:0 15px; 
+      text-decoration:none; 
+      font-weight:bold; 
+    }
+
+    nav a:hover { 
+      text-decoration:underline; 
+    }
+
+    section { 
+      padding:70px 20px; 
+    }
+
     .hero {
-      background:url('https://images.unsplash.com/photo-1594035910387-fea47794261f') center/cover no-repeat;
-      height:420px; display:flex; align-items:center; justify-content:center;
+      height:420px; 
+      display:flex; 
+      align-items:center; 
+      justify-content:center;
+      background:url('WebsiteLogo.jpeg') center/contain no-repeat,
+                 linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+      background-size:contain;
     }
-    .hero div { background:rgba(0,0,0,0.6); color:#fff; padding:40px; text-align:center; border-radius:10px; }
-    .container { max-width:1100px; margin:auto; }
-    .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; }
-    .product { background:#fff; border-radius:10px; padding:20px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
-    .product img { width:100%; height:220px; object-fit:cover; border-radius:8px; }
-    .price { font-weight:bold; margin:10px 0; }
-    button { background:#000; color:#fff; border:none; padding:10px 22px; border-radius:5px; cursor:pointer; }
-    button:hover { background:#333; }
+
+    .hero div { 
+      background:rgba(0,0,0,0.6); 
+      color:#fff; 
+      padding:40px; 
+      text-align:center; 
+      border-radius:10px; 
+    }
+
+    .container { 
+      max-width:1100px; 
+      margin:auto; 
+    }
+
+    .products { 
+      display:grid; 
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); 
+      gap:25px; 
+    }
+
+    .product { 
+      background:#fff; 
+      border-radius:10px; 
+      padding:20px; 
+      text-align:center; 
+      box-shadow:0 4px 10px rgba(0,0,0,0.1); 
+    }
+
+    .product img { 
+      width:100%; 
+      height:220px; 
+      object-fit:cover; 
+      border-radius:8px; 
+    }
+
+    /* ZENTRALE PREISLISTE */
+    .global-pricelist {
+      background:#fff;
+      padding:20px;
+      border-radius:10px;
+      text-align:center;
+      margin-bottom:40px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .global-pricelist h3 {
+      margin-top:0;
+      letter-spacing:1px;
+    }
+
+    .global-pricelist span {
+      display:inline-block;
+      margin:0 15px;
+      font-weight:bold;
+    }
+
     .image-break {
-      background:url('https://images.unsplash.com/photo-1541643600914-78b084683601') center/cover no-repeat;
-      height:300px; border-radius:15px; margin:40px 0;
+      background:#000;
+      height:80px;
+      margin:60px 0;
     }
-    footer { background:#000; color:#fff; text-align:center; padding:25px; }
+
+    footer { 
+      background:#000; 
+      color:#fff; 
+      text-align:center; 
+      padding:25px; 
+    }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -42,29 +140,84 @@
   <a href="#start" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Start</a>
   <a href="#produkte">Produkte</a>
   <a href="#ueberuns">Über uns</a>
-  
 </nav>
 
-<!-- START / BESTSELLER -->
-<section id="start" class="hero" style="background:url('WebsiteLogo.jpeg') center/contain no-repeat, linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)); background-size:contain;">
+<!-- START -->
+<section id="start" class="hero">
   <div>
     <h2>Unsere Bestseller</h2>
     <p>Die beliebtesten Düfte von DECENT PARFUM</p>
   </div>
 </section>
 
+<!-- PRODUKTE -->
 <section id="produkte">
   <div class="container">
+
+    <!-- ZENTRALE PREISLISTE -->
+    <div class="global-pricelist">
+      <h3>Unsere Preise</h3>
+      <span>3 ml – 10 €</span>
+      <span>5 ml – 15 €</span>
+      <span>10 ml – 20 €</span>
+    </div>
+
     <div class="products">
-      <div class="product"><img src="parfum1.jpg" alt="azzaro the most wanted EDP intense"><h3>azzaro the most wanted EDP intense</h3><p>Karamellig-würzig, Dunkel-warm</p><div class="price">49,90 €</div></div>
-      <div class="product"><img src="parfum2.jpg" alt="azzaro the most wanted parfum"><h3>azzaro the most wanted parfum</h3><p>Cremig-holzig, Balsamisch</p><div class="price">69,90 €</div></div>
-      <div class="product"><img src="parfum3.jpg" alt="swy intensly"><h3>swy intensly</h3><p>Vanillig-amberig, Gourmand</p><div class="price">44,90 €</div></div>
-      <div class="product"><img src="parfum4.jpg" alt="swy EDP"><h3>swy EDP</h3><p>Süß-aromatisch, Warm-würzig</p><div class="price">54,90 €</div></div>
-      <div class="product"><img src="parfum5.jpg" alt="jpg le male"><h3>jpg le male</h3><p>Cremig-pudrig, Süß-würzig</p><div class="price">59,90 €</div></div>
-      <div class="product"><img src="parfum6.jpg" alt="montblanc explorer"><h3>montblanc explorer</h3><p>Holzig-frisch, Erdigt-rauchig</p><div class="price">42,90 €</div></div>
-      <div class="product"><img src="parfum7.jpg" alt="montblanc legend spirit"><h3>montblanc legend spirit</h3><p>Aquatisch-zitrisch, Leicht-aromatisch</p><div class="price">47,90 €</div></div>
-      <div class="product"><img src="parfum8.jpg" alt="joop homme"><h3>joop homme</h3><p>Opulent-süß, Orientalisch-würzig</p><div class="price">64,90 €</div></div>
-      <div class="product"><img src="parfum9.jpg" alt="aqua di parma fico di amalfi"><h3>aqua di parma fico di amalfi</h3><p>Mediterran-fruchtig, Grün-zitrisch</p><div class="price">39,90 €</div></div>
+
+      <div class="product">
+        <img src="parfum1.jpg" alt="Azzaro The Most Wanted EDP Intense">
+        <h3>Azzaro The Most Wanted EDP Intense</h3>
+        <p>Karamellig-würzig • Dunkel-warm</p>
+      </div>
+
+      <div class="product">
+        <img src="parfum2.jpg" alt="Azzaro The Most Wanted Parfum">
+        <h3>Azzaro The Most Wanted Parfum</h3>
+        <p>Cremig-holzig • Balsamisch</p>
+      </div>
+
+      <div class="product">
+        <img src="parfum3.jpg" alt="Stronger With You Intensely">
+        <h3>Stronger With You Intensely</h3>
+        <p>Vanillig-amberig • Gourmand</p>
+      </div>
+
+      <div class="product">
+        <img src="parfum4.jpg" alt="Stronger With You EDP">
+        <h3>Stronger With You EDP</h3>
+        <p>Süß-aromatisch • Warm-würzig</p>
+      </div>
+
+      <div class="product">
+        <img src="parfum5.jpg" alt="JPG Le Male">
+        <h3>JPG Le Male</h3>
+        <p>Cremig-pudrig • Süß-würzig</p>
+      </div>
+
+      <div class="product">
+        <img src="parfum6.jpg" alt="Montblanc Explorer">
+        <h3>Montblanc Explorer</h3>
+        <p>Holzig-frisch • Erdigt-rauchig</p>
+      </div>
+
+      <div class="product">
+        <img src="parfum7.jpg" alt="Montblanc Legend Spirit">
+        <h3>Montblanc Legend Spirit</h3>
+        <p>Aquatisch-zitrisch • Leicht-aromatisch</p>
+      </div>
+
+      <div class="product">
+        <img src="parfum8.jpg" alt="Joop Homme">
+        <h3>Joop! Homme</h3>
+        <p>Opulent-süß • Orientalisch-würzig</p>
+      </div>
+
+      <div class="product">
+        <img src="parfum9.jpg" alt="Acqua di Parma Fico di Amalfi">
+        <h3>Acqua di Parma Fico di Amalfi</h3>
+        <p>Mediterran-fruchtig • Grün-zitrisch</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -75,7 +228,11 @@
 <section id="ueberuns">
   <div class="container">
     <h2>Über uns</h2>
-    <p>DECENT PARFUM steht für hochwertige Düfte, minimalistisches Design und zeitlose Eleganz. Unser Ziel ist es, exklusive Parfums zu fairen Preisen anzubieten – modern, stilvoll und für jeden Anlass.</p>
+    <p>
+      DECENT PARFUM steht für hochwertige Düfte, minimalistisches Design
+      und zeitlose Eleganz. Unser Ziel ist es, exklusive Parfums zu fairen
+      Preisen anzubieten – modern, stilvoll und für jeden Anlass.
+    </p>
   </div>
 </section>
 
@@ -86,9 +243,8 @@
 <script>
   document.querySelectorAll('nav a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#start') return; // Start hat eigene Logik
-      const target = document.querySelector(targetId);
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) know;
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth' });
@@ -99,8 +255,4 @@
 
 </body>
 </html>
-
-
-
-
 
