@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" id="top">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,51 @@
       background:#f5f5f5;
       color:#222;
       scroll-behavior:smooth;
+    }
+
+    /* PASSWORD OVERLAY */
+    .password-overlay {
+      position:fixed;
+      inset:0;
+      background:#000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:9999;
+    }
+
+    .password-box {
+      background:#111;
+      padding:40px;
+      border-radius:12px;
+      text-align:center;
+      color:#fff;
+      width:300px;
+    }
+
+    .password-box input {
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:6px;
+      margin-bottom:15px;
+      font-size:16px;
+    }
+
+    .password-box button {
+      width:100%;
+      padding:12px;
+      background:#fff;
+      color:#000;
+      border:none;
+      border-radius:6px;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    .password-box p {
+      color:#ff6b6b;
+      display:none;
     }
 
     header {
@@ -91,7 +136,6 @@
       line-height:1.6;
     }
 
-    /* SCHWARZE LEISTE / BILD */
     .image-break {
       background:#000;
       height:90px;
@@ -109,13 +153,23 @@
 
 <body>
 
+<!-- PASSWORD -->
+<div class="password-overlay" id="pwOverlay">
+  <div class="password-box">
+    <h2>DECENT PARFUM</h2>
+    <input type="password" id="pwInput" placeholder="Passwort eingeben">
+    <button onclick="checkPassword()">Betreten</button>
+    <p id="pwError">Falsches Passwort</p>
+  </div>
+</div>
+
 <header>
   <h1>DECENT PARFUM</h1>
   <p>Luxus. Eleganz. Dein Duft.</p>
 </header>
 
 <nav>
-  <a href="#start">Start</a>
+  <a href="#top">Start</a>
   <a href="#produkte">Produkte</a>
   <a href="#ueberuns">Über uns</a>
 </nav>
@@ -131,120 +185,79 @@
   <div class="container">
     <div class="products">
 
-      <!-- PRODUKT TEMPLATE -->
       <div class="product">
         <img src="parfum1.jpg">
         <h3>Azzaro The Most Wanted EDP Intense</h3>
         <p>Karamellig-würzig, dunkel-warm</p>
-        <div class="price">
-          3ml – 10€<br>
-          5ml – 15€<br>
-          10ml – 20€
-        </div>
+        <div class="price">3ml – 10€<br>5ml – 15€<br>10ml – 20€</div>
       </div>
 
       <div class="product">
         <img src="parfum2.jpg">
         <h3>Azzaro The Most Wanted Parfum</h3>
         <p>Cremig-holzig, balsamisch</p>
-        <div class="price">
-          3ml – 10€<br>
-          5ml – 15€<br>
-          10ml – 20€
-        </div>
+        <div class="price">3ml – 10€<br>5ml – 15€<br>10ml – 20€</div>
       </div>
 
       <div class="product">
         <img src="parfum3.jpg">
         <h3>Stronger With You Intensely</h3>
         <p>Vanillig-amberig, gourmand</p>
-        <div class="price">
-          3ml – 10€<br>
-          5ml – 15€<br>
-          10ml – 20€
-        </div>
+        <div class="price">3ml – 10€<br>5ml – 15€<br>10ml – 20€</div>
       </div>
 
       <div class="product">
         <img src="parfum4.jpg">
         <h3>Stronger With You EDP</h3>
         <p>Süß-aromatisch, warm-würzig</p>
-        <div class="price">
-          3ml – 10€<br>
-          5ml – 15€<br>
-          10ml – 20€
-        </div>
+        <div class="price">3ml – 10€<br>5ml – 15€<br>10ml – 20€</div>
       </div>
 
       <div class="product">
         <img src="parfum5.jpg">
         <h3>Jean Paul Gaultier Le Male</h3>
         <p>Cremig-pudrig, süß-würzig</p>
-        <div class="price">
-          3ml – 10€<br>
-          5ml – 15€<br>
-          10ml – 20€
-        </div>
+        <div class="price">3ml – 10€<br>5ml – 15€<br>10ml – 20€</div>
       </div>
 
       <div class="product">
         <img src="parfum6.jpg">
         <h3>Montblanc Explorer</h3>
         <p>Holzig-frisch, rauchig-elegant</p>
-        <div class="price">
-          3ml – 5€<br>
-          5ml – 10€<br>
-          10ml – 12€
-        </div>
+        <div class="price">3ml – 5€<br>5ml – 10€<br>10ml – 12€</div>
       </div>
 
       <div class="product">
         <img src="parfum7.jpg">
         <h3>Montblanc Legend Spirit</h3>
         <p>Aquatisch-zitrisch, klar-frisch</p>
-        <div class="price">
-          3ml – 5€<br>
-          5ml – 10€<br>
-          10ml – 12€
-        </div>
+        <div class="price">3ml – 5€<br>5ml – 10€<br>10ml – 12€</div>
       </div>
 
       <div class="product">
         <img src="parfum8.jpg">
         <h3>Joop Homme</h3>
         <p>Opulent-süß, orientalisch</p>
-        <div class="price">
-          3ml – 5€<br>
-          5ml – 10€<br>
-          10ml – 12€
-        </div>
+        <div class="price">3ml – 5€<br>5ml – 10€<br>10ml – 12€</div>
       </div>
 
       <div class="product">
         <img src="parfum9.jpg">
         <h3>Acqua di Parma Fico di Amalfi</h3>
         <p>Mediterran-fruchtig, grün-zitrisch</p>
-        <div class="price">
-          3ml – 10€<br>
-          5ml – 15€<br>
-          10ml – 20€
-        </div>
+        <div class="price">3ml – 10€<br>5ml – 15€<br>10ml – 20€</div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- SCHWARZE LEISTE BLEIBT VOR ÜBER UNS -->
 <div class="image-break"></div>
 
 <section id="ueberuns">
   <div class="container">
     <h2>Über uns</h2>
-    <p>
-      DECENT PARFUM steht für hochwertige Düfte,
-      minimalistisches Design und zeitlose Eleganz.
-    </p>
+    <p>DECENT PARFUM steht für hochwertige Düfte, minimalistisches Design und zeitlose Eleganz.</p>
   </div>
 </section>
 
@@ -253,11 +266,18 @@
 </footer>
 
 <script>
+  function checkPassword() {
+    if (pwInput.value === "3012") {
+      pwOverlay.style.display = "none";
+    } else {
+      pwError.style.display = "block";
+    }
+  }
+
   document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      document
-        .querySelector(link.getAttribute('href'))
+      document.querySelector(link.getAttribute('href'))
         .scrollIntoView({ behavior:'smooth' });
     });
   });
